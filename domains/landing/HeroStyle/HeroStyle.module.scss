@@ -1,0 +1,60 @@
+.heroStyleWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  left: 10%;
+  opacity: 0.9;
+}
+
+.background video {
+  width: 100%;
+  opacity: 0.5;
+}
+.heroTopPart {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nameAndPic {
+  span {
+    box-shadow: 0 0 20px 1px;
+    border-radius: 5%;
+  }
+  img {
+    border-radius: 5%;
+    opacity: 0.9;
+  }
+  .myName {
+    font-family: 'Raleway';
+    font-weight: 900;
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    animation: "flipInX";
+    animation-duration: 1s;
+  }
+}
+
+.animatedTexts {
+  color: var(--white-color);
+  font-family: 'Raleway';
+  font-size: 1.5rem;
+  span {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 25%;
+  right: 0;
+}
