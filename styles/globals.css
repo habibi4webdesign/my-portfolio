@@ -3,22 +3,27 @@
 @tailwind utilities;
 
 :root {
+  --base-size: 4px;
+  --max-width: 1920px;
   --primary-color: #222;
   --secondary-color: #ffb000;
   --white-color: #fff;
+  --light-transparent-white-color: #ffffffbf;
   --black-color: #000;
   --dark-gray-color: #222;
+  --light-blue-color: #172b3c;
+  --dark-blue-color: #12202d;
+  --transparent-white-color: #ffffff33;
 }
 
 html,
 body {
-  font-size: 16px;
+  font-size: var(--base-size) * 4;
   padding: 0;
   margin: 0;
   background-color: var(--primary-color);
-  font-family: 'Raleway', sans-serif, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
+  font-family: "Raleway", sans-serif, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -35,7 +40,69 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: var(--white-color);
     background: black;
   }
+}
+
+h3,
+h2 {
+  color: #ffb000;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  padding: 0;
+  margin: 0 0 calc(var(--base-size) * 12) 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  letter-spacing: -2px;
+  font-size: 2.6rem;
+  line-height: 1.2em;
+}
+
+h3 {
+  letter-spacing: -1px;
+  font-size: 2.1rem;
+  line-height: 1rem;
+}
+
+p {
+  color: var(--light-transparent-white-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+blockquote:before {
+  color: var(--transparent-white-color);
+  content: "\201C";
+  display: inline-block;
+  font-family: georgia;
+  font-size: 7.1rem;
+  position: relative;
+  vertical-align: top;
+  width: 6%;
+  top: -1.9rem;
+}
+
+blockquote {
+  border: 0 none;
+  display: block;
+  margin: 3.5em 0 3.5em 0em;
+  padding: 0;
+  text-align: left;
+}
+
+blockquote p {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4em;
+  margin: 0;
+  width: 90%;
+  color: var(--secondary-color);
 }

@@ -1,0 +1,26 @@
+.atAGlanceWrapper {
+  background-color: var(--light-blue-color);
+}
+
+.title {
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 800;
+  opacity: 0.6;
+  padding: 0 0 var(--base-size) 0;
+  text-align: left;
+}
+
+.value {
+  color: var(--white-color);
+  font-size: qrem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.titlesWrapper {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: calc(var(--base-size) * 8);
+}

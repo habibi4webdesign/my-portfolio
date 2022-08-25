@@ -5,6 +5,8 @@ import Head from "next/head";
 import { Button, ButtonBase } from "react-ui-kit-yas";
 import Header from "domains/landing/Header";
 import HeroStyle from "domains/landing/HeroStyle";
+import AtAGlance from "domains/landing/AtAGlance";
+import AboutMe from "domains/landing/AboutMe";
 
 const Home: NextPage = () => {
   return (
@@ -16,15 +18,22 @@ const Home: NextPage = () => {
           content="Yashar Habibi Khameneh personal website"
         />
         <link rel="icon" href="/favicon.ico" />
-
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <link
           href="http://fonts.cdnfonts.com/css/raleway-5"
           rel="stylesheet"
         ></link>
       </Head>
-      <Header />
-      <HeroStyle />
-      <main></main>
+
+      <main>
+        <Header />
+        <HeroStyle />
+        <AtAGlance />
+        <AboutMe />
+      </main>
 
       <footer></footer>
     </div>
