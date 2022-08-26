@@ -1947,6 +1947,11 @@ react-reveal@^1.2.2:
   dependencies:
     prop-types "^15.5.10"
 
+react-skillbars@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-skillbars/-/react-skillbars-2.0.1.tgz#ab38de6569b2bc0ec02520e5540c3ac11d96ddf8"
+  integrity sha512-uegvMc4//qZtQUDvgh3lUsNE+QAJV3nctElCMWVaswiBHjbxNEO3KqpSTji7KcdJDZrPcNE6iZCI/lxfJvFZIA==
+
 react-ui-kit-yas@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-ui-kit-yas/-/react-ui-kit-yas-1.0.6.tgz#f2664313a11eaae0bf0ab32d650aa6a474f6e098"

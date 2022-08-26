@@ -7,6 +7,7 @@ import Header from "domains/landing/Header";
 import HeroStyle from "domains/landing/HeroStyle";
 import AtAGlance from "domains/landing/AtAGlance";
 import AboutMe from "domains/landing/AboutMe";
+import MySkills from "domains/landing/MySkills";
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
         <HeroStyle />
         <AtAGlance />
         <AboutMe />
+        <MySkills />
       </main>
 
       <footer></footer>
