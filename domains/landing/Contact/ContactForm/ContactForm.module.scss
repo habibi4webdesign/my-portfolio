@@ -1,0 +1,24 @@
+.contactFormWrapper {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    textarea {
+      height: 100px;
+    }
+    > * {
+      width: 50%;
+      max-width: 450px;
+      border-radius: 3px;
+      margin-top: 20px;
+      padding: 10px;
+    }
+  }
+  button {
+    background-color: var(--secondary-color);
+    border: none;
+    height: 50px;
+    margin-top: 30px;
+  }
+}

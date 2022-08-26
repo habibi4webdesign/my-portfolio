@@ -4,9 +4,13 @@ import React from "react";
 import styles from "./AboutMe.module.scss";
 const Fade = require("react-reveal/Fade");
 
+const thisYear = new Date().getFullYear();
+const startedYear = new Date("2012-01-01").getFullYear();
+const workingYears = Math.abs(thisYear - startedYear);
+
 const AboutMe = () => {
   return (
-    <div className={styles.aboutMeWrapper}>
+    <div id="About" className={styles.aboutMeWrapper}>
       <ContentBox>
         <Fade right duration={1500}>
           <TitleBox>
@@ -15,10 +19,17 @@ const AboutMe = () => {
         </Fade>
         <Fade duration={2300}>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
-            atque aperiam delectus maiores vitae molestias rem nobis, quis at
-            quod, officia eligendi cumque, fuga similique eum sequi debitis
-            dignissimos aspernatur?
+            I'm Yashar Habibi a software engineer and front-end specialist, I
+            was born in India and grown up in Iran.
+          </p>
+          <p>
+            I am a self-taught developer that first learnt Pascal at the age of
+            nineteen. As an ever growing hobby . After completing my degree I've
+            worked as a freelancer web designer and developer, I've even
+            developed some android app with Java, but these last {workingYears}{" "}
+            years I've been working as a fultime front-end developer. Besides
+            coding, I enjoy reading novels, oil painting, digital painting, as
+            well as computer games and all kind of puzzle and board games.
           </p>
         </Fade>
         <Fade left duration={1500}>

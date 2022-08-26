@@ -5,6 +5,7 @@
 :root {
   --base-size: 4px;
   --max-width: 1920px;
+  --hover-color: #097ecb;
   --primary-color: #222;
   --secondary-color: #ffb000;
   --white-color: #fff;
@@ -19,6 +20,7 @@
 html,
 body {
   font-size: var(--base-size) * 4;
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   background-color: var(--primary-color);
@@ -106,4 +108,3 @@ blockquote p {
   width: 90%;
   color: var(--secondary-color);
 }
-

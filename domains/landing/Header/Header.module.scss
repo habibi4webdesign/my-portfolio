@@ -1,0 +1,96 @@
+.headerRoot {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  font-family: "Raleway", sans-serif;
+}
+
+.headerWrapper {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menuButton {
+  background-color: var(--hover-color);
+  cursor: pointer;
+  border-radius: 0 0 3px 3px;
+  float: none;
+  left: 50%;
+  margin-left: -2.5rem;
+  min-height: 2.5rem;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 5rem;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  &::before {
+    border-bottom: 2px solid var(--white-color);
+    border-top: 7px double var(--white-color);
+    content: "";
+    height: 0.8rem;
+    left: 1.2rem;
+    position: absolute;
+    top: 0.8rem;
+    width: 2.5rem;
+  }
+}
+
+.nav {
+  cursor: pointer;
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  margin: 0 auto;
+  background: var(--primary-color);
+  box-shadow: 0 0 70px 40px rgb(0 0 0 / 40%);
+  transition: height 300ms;
+  ul {
+    clear: left;
+    display: block;
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    li {
+      line-height: 1em;
+      list-style: none outside none;
+      margin-left: 0;
+      text-align: center;
+      display: list-item;
+      border-radius: 3px;
+      transition: all 0.2s ease-in-out;
+      font-family: "Raleway", sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      a {
+        color: var(--white-color);
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: all 0.2s ease-in-out;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        margin: 1.1rem 0 1.1rem 0;
+        &:hover {
+          cursor: pointer;
+          font-family: "Raleway", sans-serif;
+          font-size: 1rem;
+          border-bottom: 0px solid transparent;
+        }
+      }
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
+  }
+}
+
+.menuIsActive {
+  padding: 1rem 0;
+  height: 280px;
+  display: block;
+  overflow: visible;
+}

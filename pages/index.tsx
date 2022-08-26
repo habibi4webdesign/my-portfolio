@@ -8,6 +8,9 @@ import HeroStyle from "domains/landing/HeroStyle";
 import AtAGlance from "domains/landing/AtAGlance";
 import AboutMe from "domains/landing/AboutMe";
 import MySkills from "domains/landing/MySkills";
+import Portfolio from "domains/landing/Portfolio";
+import Contact from "domains/landing/Contact";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -19,14 +22,6 @@ const Home: NextPage = () => {
           content="Yashar Habibi Khameneh personal website"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <link
-          href="http://fonts.cdnfonts.com/css/raleway-5"
-          rel="stylesheet"
-        ></link>
       </Head>
 
       <main>
@@ -35,6 +30,8 @@ const Home: NextPage = () => {
         <AtAGlance />
         <AboutMe />
         <MySkills />
+        <Portfolio />
+        <Contact />
       </main>
 
       <footer></footer>

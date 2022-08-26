@@ -38,7 +38,7 @@ const colors = {
 };
 const MySkills = () => {
   return (
-    <div className={styles.skillsWrapper}>
+    <div id="Skills" className={styles.skillsWrapper}>
       <ContentBox>
         <Fade right duration={1500}>
           <TitleBox>
@@ -47,16 +47,21 @@ const MySkills = () => {
         </Fade>
         <div className={styles.skillsContentWrapper}>
           <div>
-            <p>
-              I have a lot of interest in art and creation. Since creating and
-              learning is one of my greatest interests, when I'm not coding and
-              moving pixels, I am probably either painting or studying.
-            </p>
-            <div className={styles.myIntroVideoWrapper}>
-              <video autoPlay loop muted>
-                <source type="video/mp4" src="/assets/videos/myIntro.mp4" />
-              </video>
-            </div>
+            <Fade duration={2000}>
+              <p>
+                I have a lot of interest in art and creation. Since creating and
+                learning is one of my greatest interests, when I'm not coding
+                and moving pixels, I am probably either painting or studying.
+              </p>
+            </Fade>
+
+            <Fade up duration={2000}>
+              <div className={styles.myIntroVideoWrapper}>
+                <video autoPlay loop muted>
+                  <source type="video/mp4" src="/assets/videos/myIntro.mp4" />
+                </video>
+              </div>
+            </Fade>
           </div>
           <div>
             <SkillBar

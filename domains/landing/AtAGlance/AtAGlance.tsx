@@ -20,7 +20,7 @@ const TitleAndValue = (props: { title: string; value: string }) => {
 const AtAGlance = (props: AtAGlanceProps) => {
   const [isVisible, setisVisible] = useState(false);
   return (
-    <div className={styles.atAGlanceWrapper}>
+    <div id="AtAGlance" className={styles.atAGlanceWrapper}>
       <ContentBox>
         <h3>At A Glance</h3>
         <div className={styles.titlesWrapper}>
