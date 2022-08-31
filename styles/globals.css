@@ -2,17 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* breakpoints: 480;768;1024;1200 */
+
 :root {
   --base-size: 4px;
   --max-width: 1920px;
-  --hover-color: #097ecb;
+  --light-blue-color: #097ecb;
   --primary-color: #222;
   --secondary-color: #ffb000;
   --white-color: #fff;
   --light-transparent-white-color: #ffffffbf;
   --black-color: #000;
   --dark-gray-color: #222;
-  --light-blue-color: #172b3c;
+  --midium-blue-color: #172b3c;
   --dark-blue-color: #12202d;
   --transparent-white-color: #ffffff33;
 }

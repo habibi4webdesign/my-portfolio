@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import ContentBox from "components/ContentBox";
 import TitleBox from "components/TitleBox";
 import React from "react";

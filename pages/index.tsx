@@ -11,6 +11,7 @@ import MySkills from "domains/landing/MySkills";
 import Portfolio from "domains/landing/Portfolio";
 import Contact from "domains/landing/Contact";
 import { useEffect } from "react";
+import Social from "domains/landing/Social";
 
 const Home: NextPage = () => {
   return (
@@ -30,8 +31,9 @@ const Home: NextPage = () => {
         <AtAGlance />
         <AboutMe />
         <MySkills />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Contact />
+        <Social />
       </main>
 
       <footer></footer>

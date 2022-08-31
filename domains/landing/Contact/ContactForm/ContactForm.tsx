@@ -9,8 +9,8 @@ const ContactForm = () => {
     message: "",
     reply_to: "",
   });
-  //service_m4n6gue
-  const onSubmit = (e) => {
+  
+  const onSubmit = (e: React.FormEvent) => {
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
     const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
@@ -27,8 +27,12 @@ const ContactForm = () => {
     }
   };
 
-  const handleChange = (e) => {
-    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent) => {
+    setToSend({
+      ...toSend,
+      [(e.target as HTMLInputElement).name]: (e.target as HTMLInputElement)
+        .value,
+    });
   };
   return (
     <div className={styles.contactFormWrapper}>
