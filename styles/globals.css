@@ -142,3 +142,7 @@ textarea {
 
 @media only screen and (max-width: 600px) {
 }
+
+.skillbar{
+  border-radius: 5px !important;
+}
