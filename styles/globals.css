@@ -21,6 +21,8 @@
 
 html,
 body {
+  width: 100%;
+  overflow-x: hidden;
   font-size: calc(var(--base-size) * 4);
   scroll-behavior: smooth;
   padding: 0;
@@ -39,7 +41,7 @@ a {
   box-sizing: border-box;
 }
 
-@-ms-viewport{
+@-ms-viewport {
   width: device-width;
 }
 
@@ -93,7 +95,7 @@ blockquote:before {
   vertical-align: top;
   width: 6%;
   top: -1.9rem;
-  left:-10px;
+  left: -10px;
 }
 
 blockquote {
@@ -140,4 +142,3 @@ textarea {
 
 @media only screen and (max-width: 600px) {
 }
-
