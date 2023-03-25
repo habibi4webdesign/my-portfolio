@@ -20,8 +20,9 @@ const AboutMe = () => {
         </Fade>
         <Fade duration={2300}>
           <p>
-            I'm Yashar Habibi a software engineer and front-end specialist, I
-            was born in India and grown up in Iran.
+            Hi, I'm Yashar Habibi. I work as a software engineer and specialize
+            in front-end development. Although I was born in India, I grew up in
+            Iran, and currently, I reside in Sweden.
           </p>
           <p>
             I am a self-taught developer that first learnt Pascal at the age of
