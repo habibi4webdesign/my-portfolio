@@ -54,7 +54,6 @@ const ContactForm: React.FC<{}> = () => {
           placeholder="name"
           value={toSend.name}
           onChange={handleChange}
-          autoFocus
         />
         <input
           type="text"
