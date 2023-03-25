@@ -39,6 +39,10 @@ a {
   box-sizing: border-box;
 }
 
+@-ms-viewport{
+  width: device-width;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
