@@ -22,13 +22,13 @@ const Header = () => {
           >
             <ul>
               <li>
-                <a onClick={onMenuItemSelect} href="#About">
-                  About Me
+                <a onClick={onMenuItemSelect} href="#AtAGlance">
+                  At A Glance
                 </a>
               </li>
               <li>
-                <a onClick={onMenuItemSelect} href="#AtAGlance">
-                  At S Glance
+                <a onClick={onMenuItemSelect} href="#About">
+                  About Me
                 </a>
               </li>
               <li>
@@ -36,11 +36,11 @@ const Header = () => {
                   Skills
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a onClick={onMenuItemSelect} href="#Portfolio">
                   Portfolio
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a onClick={onMenuItemSelect} href="#Contact">
                   Contact Me

@@ -21,7 +21,7 @@
 
 html,
 body {
-  font-size: var(--base-size) * 4;
+  font-size: calc(var(--base-size) * 4);
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
@@ -89,6 +89,7 @@ blockquote:before {
   vertical-align: top;
   width: 6%;
   top: -1.9rem;
+  left:-10px;
 }
 
 blockquote {
@@ -110,3 +111,29 @@ blockquote p {
   width: 90%;
   color: var(--secondary-color);
 }
+
+input,
+textarea {
+  background-color: var(--white-color);
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+  html,
+  body {
+    font-size: calc(var(--base-size) * 3);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    font-size: calc(var(--base-size) * 2);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+}
+

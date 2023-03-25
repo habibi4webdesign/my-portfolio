@@ -1,7 +1,7 @@
 .socialRoot {
   width: 90%;
   height: 2.5rem;
-  opacity: 1;
+  opacity: 0;
   left: 5%;
   bottom: -1px;
   position: fixed;
@@ -12,6 +12,10 @@
   cursor: pointer;
 }
 
+.visible {
+  opacity: 1;
+}
+
 .socialSide {
   text-align: center;
   display: inline-block;
@@ -20,12 +24,11 @@
   background-color: var(--primary-color);
   min-height: 6.25rem;
   transition: all 0.3s ease-in-out;
-  float: left;
   a {
     min-height: 1.5rem;
     color: var(--white-color);
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   i:before {
@@ -48,9 +51,11 @@
   &:before {
     font-size: 1rem;
     font-weight: 600;
-    display: block;
-    padding-top: 0.812rem;
     color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
   }
 }
 
@@ -97,4 +102,15 @@
 
 .socilaMenuIsOpen {
   height: 7.5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .socialSide::before{
+    font-size: 12px;
+  }
+  .socialButton::before{
+    border-bottom: 1px solid var(--white-color);
+    border-top: 4px double var(--white-color);
+    height: 7px;
+  }
 }

@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import { Button } from "react-ui-kit-yas";
 import styles from "./ContactForm.module.scss";
 import { send } from "emailjs-com";
 
-const ContactForm = () => {
-  const [toSend, setToSend] = useState({
+type FormValues = {
+  name: string;
+  message: string;
+  reply_to: string;
+};
+
+const ContactForm: React.FC<{}> = () => {
+  const [toSend, setToSend] = useState<FormValues>({
     name: "",
     message: "",
     reply_to: "",
   });
-  
-  const onSubmit = (e: React.FormEvent) => {
+
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
     const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
@@ -20,6 +26,11 @@ const ContactForm = () => {
       send(serviceId, templateId, toSend, userId)
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
+          setToSend({
+            name: "",
+            message: "",
+            reply_to: "",
+          });
         })
         .catch((err) => {
           console.log("FAILED...", err);
@@ -43,6 +54,7 @@ const ContactForm = () => {
           placeholder="name"
           value={toSend.name}
           onChange={handleChange}
+          autoFocus
         />
         <input
           type="text"

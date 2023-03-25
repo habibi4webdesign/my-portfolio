@@ -22,16 +22,42 @@
 
 .skillsContentWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(500px, 50%) minmax(30%, 500px);
   width: 100%;
-  column-gap: 5rem;
+  column-gap: 15rem;
 }
 
 .myIntroVideoWrapper {
   video {
     max-width: 370px;
-    margin: 50px 20px;
+    margin: 3rem 1.5rem;
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .skillsContentWrapper {
+    grid-template-columns: minmax(500px, 50%) minmax(30%, 500px);
+    column-gap: 10rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .skillsContentWrapper {
+    grid-template-columns: minmax(320px, 40%) minmax(40%, 160px);
+    column-gap: 10rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .skillsContentWrapper {
+    grid-template-columns: minmax(285px, 60%) ;
+    column-gap: 5rem;
+  }
+  .myIntroVideoWrapper {
+    video {
+      max-width: 270px;
+    }
   }
 }

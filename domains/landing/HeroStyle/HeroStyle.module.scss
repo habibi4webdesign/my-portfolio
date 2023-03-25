@@ -28,12 +28,18 @@
     box-shadow: 0 0 20px 1px;
     border-radius: 5%;
   }
+  .profileImageWrapper {
+    width: 190px;
+    height: 185px;
+    position: relative;
+  }
+
   img {
     border-radius: 5%;
     opacity: 0.9;
   }
   .myName {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-weight: 900;
     font-size: 4rem;
     color: var(--secondary-color);
@@ -41,11 +47,26 @@
     animation: "flipInX";
     animation-duration: 1s;
   }
+  @media only screen and (max-width: 768px) {
+    .profileImageWrapper {
+      width: 150px;
+      height: 145px;
+    }
+  }
+  @media only screen and (max-width: 599px) {
+    .profileImageWrapper {
+      width: 90px;
+      height: 85px;
+    }
+    .myName {
+      font-size: 2rem;
+    }
+  }
 }
 
 .animatedTexts {
   color: var(--white-color);
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 1.5rem;
   span {
     width: 100%;
@@ -54,7 +75,25 @@
 }
 
 .logo {
-  position: absolute;
+  position: relative;
   top: 25%;
   right: 0;
+  width: 140px;
+  height: 100px;
+  img {
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .logo {
+    width: 75px;
+    height: 50px;
+    position: absolute;
+    top: 15%;
+    right: 0;
+  }
+  .animatedTexts {
+    font-size: 1.1rem;
+  }
 }

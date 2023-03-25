@@ -29,7 +29,7 @@
     border-bottom: 2px solid var(--white-color);
     border-top: 7px double var(--white-color);
     content: "";
-    height: 0.8rem;
+    height: 0.75rem;
     left: 1.2rem;
     position: absolute;
     top: 0.8rem;
@@ -93,4 +93,12 @@
   height: 280px;
   display: block;
   overflow: visible;
+}
+
+@media only screen and (max-width: 992px) {
+  .menuButton::before{
+    border-bottom: 1px solid var(--white-color);
+    border-top: 4px double var(--white-color);
+    height: 0.65rem;
+  }
 }

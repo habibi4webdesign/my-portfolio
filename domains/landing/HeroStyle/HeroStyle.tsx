@@ -36,18 +36,24 @@ const HeroStyle = () => {
         <div className={styles.heroTopPart}>
           <div className={styles.nameAndPic}>
             <div className="animate__animated animate__bounce">
-              <Image
-                
-                src={myPic}
-                alt="Yashar Habibi Picture"
-                width={190}
-                height={185}
-              />
+              <div className={styles.profileImageWrapper}>
+                <Image
+                  src={myPic}
+                  alt="Yashar Habibi Picture"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             </div>
             <div className={styles.myName}>Yashar Habibi</div>
           </div>
           <div className={styles.logo}>
-            <Image src={myLogo} alt="Yashar Habibi Picture" />
+            <Image
+              src={myLogo}
+              layout="fill"
+              objectFit="cover"
+              alt="Yashar Habibi Picture"
+            />
           </div>
         </div>
         <div className={clsx(styles.animatedTexts)}>

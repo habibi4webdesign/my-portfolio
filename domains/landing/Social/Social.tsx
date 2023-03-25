@@ -1,20 +1,30 @@
 import clsx from "clsx";
-import React, { useState } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./Social.module.scss";
 
 const Social = () => {
-  const [isSocialMenuOpen, setisSocialMenuOpen] = useState(false);
+  const socialBarRef = useRef<HTMLElement>(null);
+
+  const toggleSocialBarOnScroll = () => {
+    window.onscroll = () => {
+      if (window.innerHeight / 2 <= window.scrollY) {
+        socialBarRef.current?.classList.add(styles.visible);
+      } else {
+        socialBarRef.current?.classList.remove(styles.visible);
+      }
+    };
+  };
+
+  useEffect(() => {
+    toggleSocialBarOnScroll();
+  }, []);
 
   const openSocialMenuHandler = () => {
-    setisSocialMenuOpen((pre) => !pre);
+    socialBarRef.current?.classList.toggle(styles.socilaMenuIsOpen);
   };
+
   return (
-    <section
-      className={clsx(
-        styles.socialRoot,
-        isSocialMenuOpen && styles.socilaMenuIsOpen
-      )}
-    >
+    <section ref={socialBarRef} className={clsx(styles.socialRoot)}>
       <div className={clsx(styles.socialLeft, styles.socialSide)}>
         <a href="https://www.instagram.com/yasharhabibimedia/">
           <i className="icon-instagram"></i>
