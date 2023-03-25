@@ -16,6 +16,7 @@
     "react-dom": "18.2.0",
     "react-reveal": "^1.2.2",
     "react-skillbars": "^2.0.1",
+    "react-toastify": "^9.1.2",
     "react-ui-kit-yas": "^1.0.6",
     "sass": "^1.54.5"
   },

@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from "react";
 import { Button } from "react-ui-kit-yas";
 import styles from "./ContactForm.module.scss";
 import { send } from "emailjs-com";
+import { toast } from "react-toastify";
 
 type FormValues = {
   name: string;
@@ -17,15 +18,20 @@ const ContactForm: React.FC<{}> = () => {
   });
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (toSend.name === "" || toSend.message === "" || toSend.reply_to === "") {
+      toast.error("Please fill all the fields");
+      return;
+    }
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string;
     const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string;
 
-    e.preventDefault();
     {
       send(serviceId, templateId, toSend, userId)
         .then((response) => {
-          console.log("SUCCESS!", response.status, response.text);
+          toast("Your message has been sent!");
           setToSend({
             name: "",
             message: "",
@@ -33,6 +39,7 @@ const ContactForm: React.FC<{}> = () => {
           });
         })
         .catch((err) => {
+          toast("Something went wrong! try again later.");
           console.log("FAILED...", err);
         });
     }
