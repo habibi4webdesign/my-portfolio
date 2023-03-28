@@ -43,7 +43,7 @@ const AtAGlance = (props: AtAGlanceProps) => {
         <div className={styles.titlesWrapper}>
           <Fade bottom duration={1500} when={isVisible}>
             <TitleBox>
-              <TitleAndValue title="RESIDENCE" value="Tehran" />
+              <TitleAndValue title="RESIDENCE" value="Stockholm" />
             </TitleBox>
             <TitleBox>
               <TitleAndValue title="EDUCATION" value="Computer Software" />
