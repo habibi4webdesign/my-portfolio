@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './InstagramFeed.css';
 
 const InstagramFeed = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -34,6 +33,7 @@ const InstagramFeed = () => {
         href="https://www.instagram.com/bang-olufsen"
         target="_blank"
         rel="noopener noreferrer"
+        style={{ color: 'white' }}
       >
         View more on Instagram
       </a>
