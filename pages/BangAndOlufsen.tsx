@@ -9,7 +9,7 @@ const InstagramFeed = () => {
   }, []);
 
   const fetchInstagramPosts = async () => {
-    const token = 'IGQVJWVmdCbjFWazNOYlBlazRFZAmthbzJGNDJ3YWJIWEpDY09pWkdQanhDMTdNQU14Y0xaU2JtVGdHUk9rcko4Wm1BYUtsaG9nWko1OW5LSTRSUkxnVy1zYzVCaEpWN19nV2o4dHZAFZAHBuOWxPS1hWZAQZDZD';
+    const token = 'AQA8RF-kzBtNHYWNG5do2IaBKZJli68UMEa3tivWoRWv_5ke4lRv-xQ09Pp7Jp-lPG8eujf_dAgUeF9epxPdzZdDS4i1gw9ZxfP1bu7UcUUR6aG61EWrnfu8bsdEcC9dAQ2v1OUxqPWXPG0qgDFHsh_dmdJj_cjb76KPD8WG8oY5q2dk8oTJrizLgUiKbGlfQvITw4mNLYxn0Pb_K-OvjLjB1JdZwu22xKof6FsOm7dRzA';
     const limit = 8;
     const url = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${token}&limit=${limit}`;
 
